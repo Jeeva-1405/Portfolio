@@ -1,0 +1,708 @@
+/* Base Styles & Reset */
+html {
+    scroll-behavior: smooth; /* ADDED for smooth scrolling */
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    background-color: #1E2A38; /* Primary Dark Blue/Charcoal */
+    color: #ECF0F1; /* Off-White Text */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ADDED: Add top margin to sections to offset for sticky nav */
+body > section, body > header {
+    scroll-margin-top: 70px;
+}
+.workflow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 35px;
+  margin-left: -20px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+/* --- About Me Section Styling --- */
+.about-me {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px 20px 0;
+    text-align: center;
+}
+.hosting-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    width: fit-content;
+  }
+  
+  
+.about-me-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 20px;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-me-text {
+    flex: 3;
+    /* Add text-align center to center the button within this div */
+    text-align: center; 
+}
+
+.about-me-photo {
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 1px;
+    max-width: 300px;
+}
+
+.about-me-photo img.photo-placeholder {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    background-color: #2C3E50; /* Darker Slate */
+    border: 1px solid #3498DB; /* Muted Blue Accent */
+    border-radius: 5px;
+}
+
+.about-me h2 {
+    color: #ffffff;
+    margin-top: 0;
+    font-size: 4em;
+    border-bottom: 1px dashed #49637D; /* Softer divider */
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.about-me-text p {
+    font-size: 1.1em;
+    color: #ECF0F1;
+    font-weight: 500;
+    padding: 0;
+    text-indent: 40px;
+    text-align: justify;
+    margin-bottom: 20px; /* Add some space below the paragraph */
+}
+
+.about-me strong {
+    color: #5DADE2; /* Stronger Blue for highlights */
+    font-weight: 700;
+}
+
+.project-header {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #2C3E50; /* Darker Slate */
+    border-bottom: 2px solid #3498DB; /* Muted Blue Accent */
+}
+
+.project-header h1 {
+    color: #ffffff;
+    font-size: 2.5em;
+    margin-bottom: 5px;
+}
+
+.tagline {
+    color: #BDC3C7; /* Muted text */
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.patent-info {
+    font-size: 0.9em;
+    padding: 5px 15px;
+    background-color: #34495E; /* Slightly different dark shade */
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.badge {
+    color: #3498DB; /* Muted Blue Accent */
+    font-weight: bold;
+}
+
+/* Overview Section Layout */
+.overview {
+    display: flex;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    gap: 40px;
+}
+
+.media-container {
+    flex: 1;
+    position: relative;
+}
+
+.media-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid #34495E;
+}
+
+.summary-text {
+    flex: 1;
+}
+
+.summary-text h2 {
+    color: #ffffff;
+    border-bottom: 1px solid #34495E;
+    padding-bottom: 10px;
+}
+
+/* Technical Deep Dive (Grid Layout) */
+.technical-deep-dive {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+.technical-deep-dive h2 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 40px;
+    font-size: 2em;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    /* ADDED: Set items to stretch so all cards are the same height */
+    align-items: stretch;
+}
+
+.tech-card {
+    background-color: #2C3E50; /* Darker Slate */
+    padding: 25px;
+    border-left: 3px solid #3498DB; /* Muted Blue Accent */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    /* ADDED: Set to flex container to push the button to the bottom */
+    display: flex;
+    flex-direction: column; 
+}
+
+.tech-card h3 {
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center; /* Center headings in tech cards */
+}
+
+.tech-card ul {
+    list-style: none;
+    padding: 0;
+    text-align: left; /* Ensure list items align left if text-align: center is on parent */
+    /* ADDED: Flex grow on UL to allow it to take up space in the side-by-side layout */
+    flex-grow: 1; 
+}
+
+.tech-card ul li {
+    margin-bottom: 10px;
+    font-size: 0.95em;
+    text-indent: 15px; /* Added: Indent the list item description */
+}
+
+.tech-card ul li strong {
+    color: #5DADE2; /* Stronger Blue for highlights */
+    font-weight: 700;
+}
+
+/* --- MODIFIED --- */
+.tech-card .project-details {
+    /* This container now just holds the description list */
+    /* It takes up available space to push the button to the bottom */
+    flex-grow: 1; 
+    margin-bottom: 20px;
+}
+
+.tech-card .project-details ul {
+    margin: 0;
+}
+
+/* --- MODIFIED --- */
+.tech-card .project-thumbnail {
+    width: 200px; /* Increased width for better visibility */
+    height: 120px; /* Increased height */
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid #34495E;
+    flex-shrink: 0;
+    /* This centers the image and adds vertical margin */
+    margin: 0 auto 15px; 
+    display: block;
+}
+
+/* General .document-link styling */
+.document-link {
+    display: block; /* Ensures it's a block-level element */
+    text-align: center;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    background-color: #2C3E50; /* Darker Slate */
+    color: #3498DB; /* Muted Blue Accent */
+    border: 1px solid #3498DB; /* Muted Blue Accent */
+    margin: auto auto 0 auto; /* MODIFIED: Pushees button to the bottom of the card */
+}
+
+/* Specific styling for .document-link within the about-me section */
+.about-me .document-link {
+    margin-top: 40px; /* Adjust top margin for spacing from the paragraph */
+    max-width: 250px; /* Limit width to fit the rounded section */
+    /* text-align: center is inherited from .document-link, no need here */
+}
+
+/* For secondary links within tech cards, we keep their original styles */
+.tech-card .secondary-link {
+    display: block;
+    text-align: center;
+    padding: 10px 15px;
+    background-color: #3498DB; /* Muted Blue Accent */
+    color: #1E2A38; /* Primary Dark Text */
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    /* REMOVED margin-top: 20px; as it is now controlled by flexbox margin: auto */
+    font-size: 1em;
+}
+
+
+.demo-button:hover,
+.document-link:hover,
+.tech-card .secondary-link:hover {
+    background-color: #5DADE2; /* Lighter Blue on hover */
+    color: #1E2A38;
+}
+
+
+/* --- ACHIEVEMENTS Section Styling (no change) --- */
+.achievements-recognition {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.achievements-recognition h2 {
+    color: #ffffff;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.achievement-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.achievement-card {
+    background-color: #2C3E50; /* Darker Slate */
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    position: relative;
+}
+
+.achievement-card:hover {
+    box-shadow: 0 10px 25px rgba(52, 152, 219, 0.2); /* Soft blue shadow on hover */
+}
+
+.achievement-card i {
+    font-size: 3em;
+    margin-bottom: 15px;
+    display: block;
+    color: #3498DB; /* Muted Blue Accent */
+}
+
+.achievement-card h3 {
+    color: #ffffff;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.achievement-card p {
+    color: #ECF0F1;
+    font-size: 0.95em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.achievement-card .achievement-photo {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    margin: 15px 0 10px;
+    border: 1px solid #34495E;
+    border-radius: 4px;
+    display: block;
+    transition: transform 0.1s ease-out, opacity 0.1s ease-out;
+    position: relative;
+    cursor: zoom-in;
+}
+
+.achievement-card .achievement-photo:hover::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.98) !important;
+    z-index: 2147483646 !important;
+    pointer-events: none;
+}
+
+.achievement-card .achievement-photo:hover {
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+
+    width: 75vw !important;
+    max-height: 90vh !important;
+    height: auto !important;
+
+    transform: translate(-50%, -50%) !important;
+    z-index: 2147483647 !important;
+
+    background-color: #1E2A38;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 2px solid #3498DB; /* Muted Blue Accent */
+}
+
+
+.detail-badge {
+    display: inline-block;
+    padding: 5px 15px;
+    background-color: #3498DB; /* Muted Blue Accent */
+    color: #1E2A38; /* Primary Dark Text */
+    font-weight: bold;
+    border-radius: 20px;
+    font-size: 0.8em;
+    text-transform: uppercase;
+}
+/* Action Buttons/Links */
+/* The general .document-link and .demo-button are defined earlier now */
+
+
+/* --- CONTACT INFO SECTION (NEW CIRCULAR ICON STYLE) --- */
+.contact-info {
+    max-width: 1200px;
+    margin: 80px auto; 
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #1E2A38; /* Keep body background color */
+    border-top: none; 
+}
+
+.contact-info h2 {
+    color: #ffffff;
+    font-size: 2em;
+    margin-bottom: 40px; 
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    align-items: center; 
+}
+
+/* Base style for all icon links */
+.contact-link {
+    display: inline-block;
+    text-decoration: none;
+    position: relative; /* Essential for the tooltip positioning */
+    line-height: 0; /* Ensures the circular wrapper aligns correctly */
+}
+
+/* The circular white background wrapper */
+.social-icon {
+    width: 60px; 
+    height: 60px;
+    background-color: #ECF0F1; /* Off-White/White for the base circle */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
+}
+
+/* Icon (i) styles inside the circle */
+.social-icon i {
+    font-size: 1.8em;
+    color: #1E2A38; /* Primary Dark Blue/Charcoal for default icon color */
+    transition: color 0.3s;
+    margin: 0;
+}
+
+/* --- Tooltip (Link Name) Styling using data-tooltip attribute --- */
+.contact-link::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: -30px; /* MODIFIED: Reduced distance from -40px to -30px */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #3498DB; /* Default tooltip background color (Muted Blue) */
+    color: #1E2A38;
+    padding: 10px 10px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-weight: bold;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none; /* Allows click through when hidden */
+    transition: opacity 0.3s, top 0.3s;
+    z-index: 10;
+}
+
+.contact-link:hover::before {
+    opacity: 1;
+    top: -45px; /* MODIFIED: Reduced hover slide distance from -55px to -45px */
+}
+
+
+/* --- HOVER EFFECTS (Color Scheme) --- */
+
+/* GitHub Hover: Black icon/tooltip */
+.contact-link.github:hover .social-icon {
+    background-color: #333; 
+}
+.contact-link.github:hover .social-icon i {
+    color: #ffffff;
+}
+.contact-link.github:hover::before {
+    background-color: #333;
+    color: #ffffff;
+}
+
+/* LinkedIn Hover: LinkedIn Blue icon/tooltip */
+.contact-link.linkedin:hover .social-icon {
+    background-color: #0077b5; 
+}
+.contact-link.linkedin:hover .social-icon i {
+    color: #ffffff;
+}
+.contact-link.linkedin:hover::before {
+    background-color: #0077b5;
+    color: #ffffff;
+}
+
+/* Mobile Hover: Professional Green icon/tooltip */
+.contact-link.mobile:hover .social-icon {
+    background-color: #2ECC71; 
+}
+.contact-link.mobile:hover .social-icon i {
+    color: #ffffff;
+}
+.contact-link.mobile:hover::before {
+    background-color: #2ECC71;
+    color: #1E2A38;
+}
+
+/* MODIFIED: Email/Gmail Hover: Change to a black/dark theme to match other icons' hover style */
+.contact-link.email:hover .social-icon {
+    background-color: #333; /* Dark/Black for circle on hover (like GitHub) */
+}
+.contact-link.email:hover .social-icon i { 
+    color: #ffffff; /* White icon for contrast (like GitHub) */
+}
+.contact-link.email:hover::before {
+    background-color: #333; /* Dark/Black for tooltip (like GitHub) */
+    color: #ffffff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .overview {
+        flex-direction: column;
+    }
+    .tech-card {
+        padding: 20px;
+    }
+    .about-me-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .about-me-photo {
+        min-width: unset;
+        width: 100%;
+    }
+
+    /* --- MODIFIED --- */
+    /* On small screens, the image is already centered and the text is already left-aligned, so no extra rules are needed here. */
+    .tech-card .project-details {
+        text-align: left;
+    }
+
+    /* On small screens, keep icons centered but make the gap smaller */
+    .contact-links {
+        gap: 20px;
+    }
+    /* Adjust about-me button on small screens */
+    .about-me .document-link {
+        max-width: 100%; /* Allow it to be wider on small screens */
+    }
+
+    /* Responsive adjustments for navigation on small screens */
+    .sticky-nav {
+        padding: 10px;
+        /* Revert to justify-content: center for smaller screens if space is tight */
+        justify-content: center; 
+    }
+
+    .sticky-nav li {
+        margin: 0 10px; /* Adjust margin on smaller screens */
+    }
+    
+    .nav-name {
+        /* Hide name on small screens to prioritize space for links */
+        display: none; 
+    }
+
+    /* Hide text and show only icons on very small screens */
+    @media (max-width: 500px) {
+        .sticky-nav a {
+            font-size: 1.2em; /* Make icons slightly bigger */
+        }
+        .sticky-nav a span {
+            display: none; /* Hide the text */
+        }
+        .sticky-nav i {
+            margin-right: 0; /* Remove margin when text is hidden */
+        }
+    }
+}
+
+/* === NAVIGATION BAR STYLES ADDED HERE === */
+.sticky-nav {
+    background-color: rgba(30, 42, 56, 0.9); /* Same as body but with transparency */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    padding: 15px 40px; /* Increased vertical and horizontal padding for a bigger bar */
+    
+    /* MODIFIED: Use space-between to push the name and links to opposite sides */
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box; 
+}
+
+/* NEW STYLE for the name on the left */
+.nav-name {
+    color: #ffffff; /* White text */
+    font-size: 1.2em; /* Slightly larger than links */
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-right: 20px; /* Space between name and links */
+}
+
+.sticky-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex; /* Makes sure the li elements line up */
+}
+
+.sticky-nav li {
+    display: inline-block;
+    margin: 0 25px; /* INCREASED: Increase horizontal margin for more spacing */
+}
+
+.sticky-nav a {
+    color: #ECF0F1; /* Off-White Text */
+    text-decoration: none;
+    font-size: 1.1em; /* SLIGHTLY INCREASED: Make the font a little bigger */
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.sticky-nav a:hover {
+    color: #3498DB; /* Muted Blue Accent */
+}
+
+.sticky-nav i {
+    margin-right: 8px; /* Space between icon and text */
+}
+
+
+/* --- CREATIVE LOADING ANIMATION FOR COMING SOON SECTION (Typing Effect) --- */
+
+/* KEYFRAMES for Typing (The text appears) */
+/* The text types out fully in the first 75% of the 4s duration (3 seconds) */
+@keyframes typing-4s {
+    0% { width: 0 }
+    75% { width: 100% } 
+    100% { width: 100% } /* Holds the full text for the last 1 second (25%) */
+}
+
+/* KEYFRAMES for Blinking Caret (The cursor) */
+/* The cursor is solid during the typing, then blinks during the pause. */
+@keyframes blink-caret-4s {
+    0%, 74% { border-color: #3498DB; } /* Visible during typing */
+    
+    /* Blinking sequence during the last 1 second (75%-100%) */
+    75%, 85%, 95% { border-color: transparent; }
+    80%, 90%, 100% { border-color: #3498DB; }
+}
+
+.loading-animation {
+    /* Center the typing block within the card */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; 
+    padding: 30px 0; 
+}
+
+.typing-text {
+    /* Text styling */
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #3498DB;
+    margin: 0; 
+    
+    /* Typing Effect Properties */
+    overflow: hidden; 
+    white-space: nowrap; 
+    letter-spacing: .15em; 
+    width: 0; 
+    border-right: .15em solid #3498DB; /* The cursor */
+
+    /* The animation sequences (Total cycle: 4 seconds, steps for 18 characters) */
+    animation: 
+        typing-4s 4s steps(18) infinite, 
+        blink-caret-4s 4s step-end infinite; 
+}
