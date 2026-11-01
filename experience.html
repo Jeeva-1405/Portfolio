@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience — Jeeva E</title>
+    <link rel="stylesheet" href="Styles.css?v=1.2">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&family=Caveat:wght@500;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- FOUC FIX: hide page content until fonts + styles are ready -->
+    <style>
+        #page-content { visibility: hidden; }
+    </style></head>
+
+<body>
+
+    <!-- LOADER -->
+    <div id="page-loader" style="
+        position:fixed; inset:0; z-index:9999;
+        background:#ebe8e0;
+        display:flex; flex-direction:column;
+        align-items:center; justify-content:center;
+        gap:18px;
+        transition: opacity 0.5s ease, visibility 0.5s ease;
+    ">
+        <span style="
+            font-family:'Georgia',serif;
+            font-size:26px; letter-spacing:0.22em;
+            color:#1a1a18; font-weight:400;
+        ">JEEVA</span>
+        <div style="
+            width:120px; height:1px;
+            background:rgba(26,26,24,0.15);
+            border-radius:2px; overflow:hidden;
+        ">
+            <div id="loader-bar" style="
+                height:100%; background:#1a1a18;
+                border-radius:2px; width:0%;
+                transition:width 0.1s linear;
+            "></div>
+        </div>
+    </div>
+
+    <div class="mobile-warning">
+        <i class="fas fa-desktop"></i>
+        <h2>Desktop Mode Only</h2>
+        <p>This portfolio is designed for an immersive desktop experience. <br> Please switch to a desktop device or enable desktop mode.</p>
+    </div>
+
+    <nav class="sticky-nav">
+        <div class="nav-left">
+            <a href="index.html" class="nav-logo">JEEVA</a>
+        </div>
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link"><span>About</span></a></li>
+            <li><a href="patent.html" class="nav-link"><span>Patent</span></a></li>
+            <li><a href="experience.html" class="nav-link active"><span>Experience</span></a></li>
+            <li><a href="achievements.html" class="nav-link"><span>Achievements</span></a></li>
+        </ul>
+        <div class="nav-right">
+            <a href="https://github.com/Jeeva-1405/" target="_blank" class="nav-icon" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/jeeva-e-b4b442290/" target="_blank" class="nav-icon" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </nav>
+
+    <main id="page-content">
+
+        <header class="page-header">
+            <h1>Experience</h1>
+            <p>Projects &amp; Collaborations</p>
+        </header>
+
+        <section class="corkboard">
+            <div class="board-label">
+                <span>Pinned to the board</span>
+            </div>
+
+            <div class="sticky-grid">
+
+                <!-- Note 1: SpeedEX -->
+                <div class="sticky sticky-1">
+                    <div class="sticky-top"><div class="pin"></div></div>
+                    <div class="sticky-body">
+                        <div class="sticky-num">01 / 07</div>
+                        <div class="sticky-title">SpeedEX</div>
+                        <div class="sticky-role">CONTRIBUTOR · COLLABORATOR</div>
+                        <div class="sticky-line"></div>
+                        <div class="sticky-desc">
+                            Built for operators who move fast. A logistics UI where real-time tracking meets atomic-precision routing — every millisecond of latency is a broken promise.
+                        </div>
+                        <div class="sticky-stack">
+                            <span class="stack-tag">HTML</span>
+                            <span class="stack-tag">CSS</span>
+                            <span class="stack-tag">JS</span>
+                            <span class="stack-tag">LOGISTICS</span>
+                        </div>
+                        <a class="sticky-link" href="https://nareshdharmaraj.github.io/SpeedEX/" target="_blank">Visit Project →</a>
+                    </div>
+                    <span class="annotation ann-1">solo build ✓</span>
+                </div>
+
+                <!-- Note 2: Lexspace -->
+                <div class="sticky sticky-2">
+                    <div class="sticky-top"><div class="pin"></div></div>
+                    <div class="sticky-body">
+                        <div class="sticky-num">02 / 07</div>
+                        <div class="sticky-title">Lexspace</div>
+                        <div class="sticky-role">UI ENGINEER · COLLABORATOR</div>
+                        <div class="sticky-line"></div>
+                        <div class="sticky-desc">
+                            Where premium furniture finds its digital home. A luxury e-commerce experience — curating silence, crafting atmosphere, one room at a time.
+                        </div>
+                        <div class="sticky-stack">
+                            <span class="stack-tag">HTML</span>
+                            <span class="stack-tag">CSS</span>
+                            <span class="stack-tag">JS</span>
+                            <span class="stack-tag">E-COMMERCE</span>
+                        </div>
+                        <a class="sticky-link" href="https://nareshdharmaraj.github.io/Lexspace/" target="_blank">Visit Project →</a>
+                    </div>
+                    <span class="annotation ann-2">solo build ✓</span>
+                </div>
+
+                <!-- Note 3: Gilded Aura -->
+                <div class="sticky sticky-3">
+                    <div class="sticky-top"><div class="pin"></div></div>
+                    <div class="sticky-body">
+                        <div class="sticky-num">03 / 07</div>
+                        <div class="sticky-title">Gilded Aura</div>
+                        <div class="sticky-role">SOLO ARCHITECT · CREATOR</div>
+                        <div class="sticky-line"></div>
+                        <div class="sticky-desc">
+                            Fashion as a digital experience. A luxury jewelry platform built solo from scratch — every pixel intentional, every interaction deliberate. User &amp; admin dashboards included.
+                        </div>
+                        <div class="sticky-stack">
+                            <span class="stack-tag">HTML</span>
+                            <span class="stack-tag">CSS</span>
+                            <span class="stack-tag">JS</span>
+                            <span class="stack-tag">E-COMMERCE</span>
+                        </div>
+                        <a class="sticky-link" href="https://jeeva-1405.github.io/Gilded-aura/" target="_blank">Visit Project →</a>
+                    </div>
+                    <span class="annotation ann-3">solo build ✓</span>
+                </div>
+
+                <!-- Note 4: Framecape -->
+                <div class="sticky sticky-4">
+                    <div class="sticky-top"><div class="pin"></div></div>
+                    <div class="sticky-body">
+                        <div class="sticky-num">04 / 07</div>
+                        <div class="sticky-title">Framecape</div>
+                        <div class="sticky-role">SOLO ARCHITECT · CREATOR</div>
+                        <div class="sticky-line"></div>
+                        <div class="sticky-desc">
+                            A live production website built end-to-end from scratch — every layout decision, interaction, and detail crafted solo.
+                        </div>
+                        <div class="sticky-stack">
+                            <span class="stack-tag">HTML</span>
+                            <span class="stack-tag">CSS</span>
+                            <span class="stack-tag">JS</span>
+                            <span class="stack-tag">PRODUCTION</span>
+                        </div>
+                        <a class="sticky-link" href="https://framecape.com/" target="_blank">Visit Site →</a>
+                    </div>
+                    <span class="annotation ann-4">live build ✓</span>
+                </div>
+
+                <!-- Note 5: College Clubs Portal -->
+                <div class="sticky sticky-5">
+                    <div class="sticky-top"><div class="pin"></div></div>
+                    <div class="sticky-body">
+                        <div class="sticky-num">05 / 07</div>
+                        <div class="sticky-title">Clubs Portal</div>
+                        <div class="sticky-role">SOLO ARCHITECT · CREATOR</div>
+                        <div class="sticky-line"></div>
+                        <div class="sticky-desc">
+                            A web portal for college clubs — managing members, events, and project updates with streamlined communication across the club.
+                        </div>
+                        <div class="sticky-stack">
+                            <span class="stack-tag">HTML</span>
+                            <span class="stack-tag">CSS</span>
+                            <span class="stack-tag">JS</span>
+                            <span class="stack-tag">PRODUCTION</span>
+                        </div>
+                        <a class="sticky-link" href="https://clubs.mkce.ac.in/" target="_blank">Visit Site →</a>
+                    </div>
+                    <span class="annotation ann-5">live build ✓</span>
+                </div>
+
+                <!-- Note 6: JM Minkalam -->
+                <div class="sticky sticky-6">
+                    <div class="sticky-top"><div class="pin"></div></div>
+                    <div class="sticky-body">
+                        <div class="sticky-num">06 / 07</div>
+                        <div class="sticky-title">JM Minkalam</div>
+                        <div class="sticky-role">SOLO ARCHITECT · CREATOR</div>
+                        <div class="sticky-line"></div>
+                        <div class="sticky-desc">
+                            A live tribute website built entirely from scratch — honouring a legacy with care, precision, and intentional design.
+                        </div>
+                        <div class="sticky-stack">
+                            <span class="stack-tag">HTML</span>
+                            <span class="stack-tag">CSS</span>
+                            <span class="stack-tag">JS</span>
+                            <span class="stack-tag">PRODUCTION</span>
+                        </div>
+                        <a class="sticky-link" href="https://jmminkalam.in/" target="_blank">Visit Site →</a>
+                    </div>
+                    <span class="annotation ann-6">live build ✓</span>
+                </div>
+
+                <!-- Note 7: VasoolX App -->
+                <div class="sticky sticky-7">
+                    <div class="sticky-top"><div class="pin"></div></div>
+                    <div class="sticky-body">
+                        <div class="sticky-num">07 / 07</div>
+                        <div class="sticky-title">VasoolX App</div>
+                        <div class="sticky-role">SOLO ARCHITECT · CREATOR</div>
+                        <div class="sticky-line"></div>
+                        <div class="sticky-desc">
+                            An Android app that replaces manual registers for money lenders — auto-calculates interest, tracks bulk dues, and eliminates disputes.
+                        </div>
+                        <div class="sticky-stack">
+                            <span class="stack-tag">ANDROID</span>
+                            <span class="stack-tag">JAVA</span>
+                            <span class="stack-tag">SQLITE</span>
+                            <span class="stack-tag">FINTECH</span>
+                        </div>
+                        <a class="sticky-link" href="https://play.google.com/store/apps/details?id=com.vasoolx.app">Visit App →</a>
+                    </div>
+                    <span class="annotation ann-7">solo build ✓</span>
+                </div>
+
+            </div>
+        </section>
+
+        <footer class="main-footer">
+            <p class="footer-end-text">© 2025 Jeeva E. All rights reserved.</p>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+    <!-- STICKIES OBSERVER -->
+    <script>
+        function initStickies() {
+            var stickies = document.querySelectorAll('.sticky');
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.15 });
+            stickies.forEach(function (s) { observer.observe(s); });
+        }
+        document.addEventListener('pageSwapped', initStickies);
+    </script>
+
+    <!-- LOADER + FOUC FIX -->
+    <script>
+        (function () {
+            var bar = document.getElementById('loader-bar');
+            var loader = document.getElementById('page-loader');
+            var content = document.getElementById('page-content');
+            var w = 0;
+            var t = setInterval(function () {
+                w += Math.random() * 12;
+                if (w > 90) w = 90;
+                bar.style.width = w + '%';
+            }, 100);
+
+            function hideLoader() {
+                clearInterval(t);
+                bar.style.width = '100%';
+                content.style.visibility = 'visible';
+                initStickies();
+                setTimeout(function () {
+                    loader.style.opacity = '0';
+                    loader.style.visibility = 'hidden';
+                }, 300);
+            }
+
+            window.addEventListener('load', function () {
+                // Wait for all fonts to finish rendering
+                if (document.fonts && document.fonts.ready) {
+                    document.fonts.ready.then(hideLoader);
+                } else {
+                    hideLoader();
+                }
+            });
+        })();
+    </script>
+
+    <!-- BACK TO TOP -->
+    <div id="btt-wrap" style="
+        position:fixed; bottom:32px; right:32px;
+        display:flex; align-items:center; gap:12px;
+        opacity:0; visibility:hidden;
+        transition:opacity 0.35s ease, visibility 0.35s ease;
+        z-index:999;
+    ">
+        <span style="
+            font-family:'DM Sans',sans-serif;
+            font-size:11px; letter-spacing:0.1em;
+            color:#6b6960; text-transform:uppercase;
+        ">Back to top</span>
+        <button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="
+            width:44px; height:44px;
+            border:1px solid #1a1a18;
+            border-radius:50%;
+            background:transparent;
+            cursor:pointer;
+            display:flex; align-items:center; justify-content:center;
+            transition:background 0.2s;
+        "
+        onmouseover="this.style.background='#1a1a18';this.querySelector('path').style.stroke='#ebe8e0'"
+        onmouseout="this.style.background='transparent';this.querySelector('path').style.stroke='#1a1a18'">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path d="M12 19V5M5 12l7-7 7 7" stroke="#1a1a18" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="transition:stroke 0.2s"/>
+            </svg>
+        </button>
+    </div>
+
+    <script>
+        (function () {
+            var el = document.getElementById('btt-wrap');
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 300) {
+                    el.style.opacity = '1';
+                    el.style.visibility = 'visible';
+                } else {
+                    el.style.opacity = '0';
+                    el.style.visibility = 'hidden';
+                }
+            });
+        })();
+    </script>
+
+</body>
+</html>
